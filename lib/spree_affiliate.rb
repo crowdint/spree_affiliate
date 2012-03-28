@@ -2,6 +2,7 @@ require 'spree_core'
 
 module SpreeAffiliate
   class Engine < Rails::Engine
+    engine_name 'spree_affiliate'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
