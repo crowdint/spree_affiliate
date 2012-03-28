@@ -1,8 +1,6 @@
-# -*- encoding: utf-8 -*-
-
+# encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-
   s.name        = 'spree_affiliate'
   s.version     = '1.0.0'
   s.authors     = ['Rails Dog']
@@ -14,11 +12,18 @@ Gem::Specification.new do |s|
   s.rubygems_version      = '1.3.6'
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ["lib"]
 
-  s.add_dependency('spree_core', '>= 0.40.0')
-  s.add_dependency('spree_auth', '>= 0.40.0')
-  s.add_dependency('spree_store_credits', '>= 1.0.0')
-  s.add_dependency('spree_email_to_friend', '>= 1.0.0')
+  s.add_dependency 'spree_core'
+  s.add_dependency 'spree_auth'
+  #s.add_dependency 'spree_store_credits', '>= 1.0.0'
+  #s.add_dependency 'spree_email_to_friend', '>= 1.0.0'
+
+  s.add_development_dependency 'capybara', '1.0.1'
+  s.add_development_dependency 'factory_girl'
+  s.add_development_dependency 'ffaker'
+  s.add_development_dependency 'rspec-rails',  '~> 2.7'
+  s.add_development_dependency 'cucumber'
+  s.add_development_dependency 'sqlite3'
 end
