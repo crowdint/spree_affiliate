@@ -1,4 +1,4 @@
-UserRegistrationsController.class_eval do
+Spree::UserRegistrationsController.class_eval do
   include AffiliateCredits
 
   after_filter :check_affiliate, :only => :create
@@ -14,7 +14,7 @@ UserRegistrationsController.class_eval do
       affiliate = sender.affiliates.where(:affiliate_email => @user.email).first
 
       #if none exist create an affiliate
-      if affiliate.nil? && Affiliate.where(:affiliate_email => @user.email).count == 0
+      if affiliate.nil? && Spree::Affiliate.where(:affiliate_email => @user.email).count == 0
         affiliate = sender.affiliates.create(:affiliate_email => @user.email)
       else
         #affiliate is registered to a different account (other than the ref_id above). what should we do?

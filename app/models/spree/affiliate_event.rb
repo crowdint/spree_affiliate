@@ -1,4 +1,4 @@
-class AffiliateEvent < ActiveRecord::Base
+class Spree::AffiliateEvent < ActiveRecord::Base
   belongs_to :affiliate
   belongs_to :reward, :polymorphic => true
   belongs_to :user
