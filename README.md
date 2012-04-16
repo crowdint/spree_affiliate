@@ -1,23 +1,6 @@
-Spree Affiliate
+DISCLAIMER
 ===============
-Allows customers to refer friends and earn store credit for each user who registers and/or orders.
+This gem is customized for an internal project, so it wont work out of the box. 
 
-You can also give store credit to the refered friends on signup and after first order.
-
-Installation
-============
-
-1. Add to Gemfile:
-
-        gem "spree_store_credits"
-        gem "spree_email_to_friend"
-        gem "spree_affiliate"
-
-1. Run `bundle install`
-1. Run install rake task for all extensions:
-
-        rake spree_store_credits:install
-        rake spree_affiliate:install
-
-1. Run `rake db:migrate`
-
+For further information visit:
+ [Spree Afiliate](https://github.com/spree/spree_affiliate)
